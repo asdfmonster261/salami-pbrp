@@ -1,7 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_salami.mk
+    $(LOCAL_DIR)/pb_salami.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_salami-eng
+    pb_salami-eng

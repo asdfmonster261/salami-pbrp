@@ -10,12 +10,16 @@ PRODUCT_PLATFORM := kalama
 COMMON_PATH := device/oneplus/sm85xx-common
 DEVICE_PATH := device/oneplus/salami
 
-# Inherit from the recovery product configuration
-$(call inherit-product, vendor/twrp/config/common.mk)
+# PBRP reads $(PB_CODE) in vendor/pb/config/common.mk for the maintainer
+# lookup, so set it before the inherit below.
+PB_CODE := salami
+
+# Inherit from the PitchBlack recovery product configuration
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Device identifiers
 PRODUCT_DEVICE := salami
-PRODUCT_NAME := twrp_salami
+PRODUCT_NAME := pb_salami
 PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := CPH2449
 PRODUCT_MANUFACTURER := OnePlus
