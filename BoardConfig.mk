@@ -9,6 +9,11 @@
 TW_FRAMERATE := 120
 TW_MAX_BRIGHTNESS := 550
 
+# Flashlight: pin the torch node. PBRP's led auto-detect matches the first
+# /sys/class/leds entry instead of a torch, so the button never lit the LED.
+# led:switch_0 is the enable; brightness comes from the pb_bright_value default.
+PB_TORCH_PATH := "/sys/class/leds/led:torch_0"
+
 # Vibrator (AIDL haptics)
 TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 TW_SUPPORT_INPUT_AIDL_HAPTICS_FIX_OFF := true
